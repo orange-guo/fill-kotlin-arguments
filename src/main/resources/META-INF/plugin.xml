@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.github.orange-guo.fill-kotlin-arguments</id>
+    <name>Fill Kotlin Arguments</name>
+    <version>0.0.1</version>
+    <vendor email="gxc0622@gmail.com" url="https://github.com/orange-guo">ornage-guo</vendor>
+
+    <description><![CDATA[
+        <p>A JetBrains IDEA plugin used to fill kotlin arguments.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[]]>
+    </change-notes>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="242.*"/>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <supportsKotlinPluginMode supportsK1="false" supportsK2="true" />
+        <localInspection implementationClass="com.github.orangeguo.fillkotlinarguments.SpecifyAllRemainingArgumentsKotlinInspection"
+                         groupPath="Kotlin"
+                         groupName="Fill arguments"
+                         enabledByDefault="true"
+                         level="INFORMATION"
+                         language="kotlin"
+                         displayName="Specify all remaining arguments" />
+    </extensions>
+</idea-plugin>
