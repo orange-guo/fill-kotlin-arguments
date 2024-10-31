@@ -31,7 +31,7 @@ class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 		val session: KaSession,
 	)
 
-	fun Context.withProcessingFunction(function: String): Context =
+	fun Context.withNewProcessingFunction(function: String): Context =
 		copy(processingFunctions = processingFunctions + function)
 
 	@OptIn(KaIdeApi::class)
@@ -105,7 +105,7 @@ class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 	@OptIn(KaIdeApi::class)
 	private fun KaFunctionSymbol.createFunctionCall(ctx: Context): String = with(ctx.session) {
 		val functionName = importableFqName?.asString() ?: return "TODO()"
-		val newCtx = ctx.withProcessingFunction(functionName)
+		val newCtx = ctx.withNewProcessingFunction(functionName)
 		if (functionName in ctx.processingFunctions) {
 			return """TODO("skip recursive")"""
 		}
@@ -119,7 +119,7 @@ class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 	@OptIn(KaIdeApi::class)
 	private fun KaFunctionSymbol.createArgumentList(ctx: Context): String = with(ctx.session) {
 		val functionName = importableFqName?.asString() ?: return "TODO()"
-		val newCtx = ctx.withProcessingFunction(functionName)
+		val newCtx = ctx.withNewProcessingFunction(functionName)
 
 		valueParameters.joinToString(prefix = "(", separator = ",", postfix = ")") { symbol ->
 			symbol.name.asString() + " = " + symbol.returnType.createValue(newCtx)
