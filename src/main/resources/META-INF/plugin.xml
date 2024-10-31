@@ -19,7 +19,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <supportsKotlinPluginMode supportsK1="false" supportsK2="true" />
-        <localInspection implementationClass="com.github.orangeguo.fillkotlinarguments.SpecifyAllRemainingArgumentsKotlinInspection"
+        <localInspection implementationClass="com.github.orangeguo.fillkotlinarguments.FillAllRemainingArgumentsKotlinInspection"
                          groupPath="Kotlin"
                          groupName="Fill arguments"
                          enabledByDefault="true"

@@ -27,11 +27,11 @@ import org.jetbrains.kotlin.psi.psiUtil.getPrevSiblingIgnoringWhitespaceAndComme
  * @author Xiangcheng Kuo
  * @since 2024-10-30
  */
-class SpecifyAllRemainingArgumentsQuickFix(
+class FillAllRemainingArgumentsQuickFix(
 	private val suggestArguments: KtValueArgumentList
 ) : LocalQuickFix {
 
-	override fun getFamilyName(): @IntentionFamilyName String = "Specify all remaining arguments"
+	override fun getFamilyName(): @IntentionFamilyName String = "Fill all remaining arguments"
 
 	override fun applyFix(
 		project: Project, descriptor: ProblemDescriptor

@@ -21,7 +21,7 @@ import org.jetbrains.kotlin.psi.KtCallExpression
 import org.jetbrains.kotlin.psi.KtPsiFactory
 import org.jetbrains.kotlin.psi.valueArgumentListVisitor
 
-class SpecifyAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
+class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 
 	data class Context(
 		// A list of functions that are currently being processed
@@ -60,7 +60,11 @@ class SpecifyAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() 
 
 				val text = functionSymbol.createArgumentList(context)
 
-				holder.registerProblem(argumentList, "Specify all remaining arguments", SpecifyAllRemainingArgumentsQuickFix(context.factory.createCallArguments(text)))
+				holder.registerProblem(
+					argumentList,
+					"Fill all remaining arguments",
+					FillAllRemainingArgumentsQuickFix(context.factory.createCallArguments(text))
+				)
 			}
 
 		}
