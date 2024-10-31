@@ -27,11 +27,11 @@ import org.jetbrains.kotlin.psi.psiUtil.getPrevSiblingIgnoringWhitespaceAndComme
  * @author Xiangcheng Kuo
  * @since 2024-10-30
  */
-class FillEmptyValueQuickFix(
+class SpecifyAllRemainingArgumentsQuickFix(
 	private val suggestArguments: KtValueArgumentList
 ) : LocalQuickFix {
 
-	override fun getFamilyName(): @IntentionFamilyName String = "Fill empty values"
+	override fun getFamilyName(): @IntentionFamilyName String = "Specify all remaining arguments"
 
 	override fun applyFix(
 		project: Project, descriptor: ProblemDescriptor
