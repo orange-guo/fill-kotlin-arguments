@@ -6,6 +6,9 @@
 
     <description><![CDATA[
         <p>A JetBrains IDEA plugin used to fill kotlin arguments.</p>
+        <a target="_blank" href="https://raw.githubusercontent.com/orange-guo/fill-kotlin-arguments/main/screencast.gif">
+            <img src="https://raw.githubusercontent.com/orange-guo/fill-kotlin-arguments/main/screencast.gif" style="max-width:100%;">
+        </a>
     ]]></description>
 
     <change-notes><![CDATA[]]>
@@ -18,13 +21,14 @@
     <depends>org.jetbrains.kotlin</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <supportsKotlinPluginMode supportsK1="false" supportsK2="true" />
-        <localInspection implementationClass="com.github.orangeguo.fillkotlinarguments.FillAllRemainingArgumentsKotlinInspection"
-                         groupPath="Kotlin"
-                         groupName="Fill arguments"
-                         enabledByDefault="true"
-                         level="INFORMATION"
-                         language="kotlin"
-                         displayName="Specify all remaining arguments" />
+        <supportsKotlinPluginMode supportsK1="false" supportsK2="true"/>
+        <localInspection
+                implementationClass="com.github.orangeguo.fillkotlinarguments.FillAllRemainingArgumentsKotlinInspection"
+                groupPath="Kotlin"
+                groupName="Fill arguments"
+                enabledByDefault="true"
+                level="INFORMATION"
+                language="kotlin"
+                displayName="Specify all remaining arguments"/>
     </extensions>
 </idea-plugin>
