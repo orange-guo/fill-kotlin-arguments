@@ -31,7 +31,7 @@ version = "0.0.1"
 
 dependencies {
 	intellijPlatform {
-		intellijIdeaCommunity("2024.2")
+		intellijIdeaCommunity("2024.1")
 		bundledPlugin("org.jetbrains.kotlin")
 		instrumentationTools()
 	}
