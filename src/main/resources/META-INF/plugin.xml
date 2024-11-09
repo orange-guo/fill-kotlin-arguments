@@ -14,15 +14,14 @@
 
     <change-notes><![CDATA[]]>
     </change-notes>
-
-<!--    &lt;!&ndash; please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description &ndash;&gt;-->
-<!--    <idea-version since-build="242.*"/>-->
-
     <depends>com.intellij.modules.lang</depends>
     <depends>org.jetbrains.kotlin</depends>
 
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <supportsKotlinPluginMode supportsK1="false" supportsK2="true" />
+    </extensions>
+
     <extensions defaultExtensionNs="com.intellij">
-        <supportsKotlinPluginMode supportsK1="false" supportsK2="true"/>
         <localInspection
                 implementationClass="com.github.orangeguo.fillkotlinarguments.FillAllRemainingArgumentsKotlinInspection"
                 groupPath="Kotlin"

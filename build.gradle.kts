@@ -32,6 +32,7 @@ version = "0.0.1"
 intellijPlatform {
 	pluginConfiguration {
 		ideaVersion {
+			// https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges
 			sinceBuild = "242"
 			untilBuild = "243.*"
 		}
