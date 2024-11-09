@@ -1,6 +1,5 @@
 package com.github.orangeguo.fillkotlinarguments
 
-import com.appmattus.kotlinfixture.kotlinFixture
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
 import org.jetbrains.kotlin.analysis.api.KaIdeApi
@@ -69,14 +68,12 @@ class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 
 		}
 
-	val fixture = kotlinFixture()
-
 	fun KaType.createValue(ctx: Context): String = with(ctx.session) {
 		when {
 			isBooleanType -> "false"
 
 			isCharType -> "''"
-			isCharSequenceType || isStringType -> """"${fixture.create(String::class.java)}""""
+			isCharSequenceType || isStringType -> """"""""
 
 			isDoubleType -> "0.0"
 			isFloatType -> "0.0f"
