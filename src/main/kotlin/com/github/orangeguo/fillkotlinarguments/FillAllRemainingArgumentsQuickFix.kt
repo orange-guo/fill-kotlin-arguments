@@ -22,8 +22,6 @@ import org.jetbrains.kotlin.psi.psiUtil.collectDescendantsOfType
 import org.jetbrains.kotlin.psi.psiUtil.getPrevSiblingIgnoringWhitespaceAndComments
 
 /**
- * The default implementation of [AclManager]
- *
  * @author Xiangcheng Kuo
  * @since 2024-10-30
  */

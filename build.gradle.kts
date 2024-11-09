@@ -37,13 +37,6 @@ dependencies {
 	}
 	implementation(platform("org.jetbrains.kotlin:kotlin-bom:2.0.0"))
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-	// Lorem : An extremely useful Lorem Ipsum generator for Java!
-	implementation("com.thedeanda:lorem:2.1")
-
-	testImplementation("junit:junit:4.13.1")
-	testImplementation("io.mockk:mockk:1.13.4")
-	implementation("com.appmattus.fixture:fixture:1.2.0")
 }
 
 tasks.withType<KotlinCompile> {
