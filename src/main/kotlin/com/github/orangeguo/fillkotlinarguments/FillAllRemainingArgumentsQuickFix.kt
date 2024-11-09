@@ -63,17 +63,12 @@ class FillAllRemainingArgumentsQuickFix(
 				.filter { it.arguments.isNotEmpty() }.forEach { PutArgumentOnSeparateLineHelper.applyTo(it, editor) }
 		}
 
-		// 3. Remove full qualifiers and import references
-		// This should be run after PutArgumentOnSeparateLineHelper
 		argumentList.findElementsInArgsByType<KtQualifiedExpression>(argumentSize)
 			.forEach { ShortenReferences.DEFAULT.process(it) }
 		argumentList.findElementsInArgsByType<KtLambdaExpression>(argumentSize)
 			.forEach { ShortenReferences.DEFAULT.process(it) }
 
-		val movePointerToEveryArgument = true
-		// 4. Set argument placeholders
-		// This should be run on final state
-		if (editor !is ImaginaryEditor && movePointerToEveryArgument) {
+		if (editor !is ImaginaryEditor) {
 			PsiDocumentManager.getInstance(project).doPostponedOperationsAndUnblockDocument(editor.document)
 			argumentList.startToReplaceArguments(argumentSize, editor)
 		}
