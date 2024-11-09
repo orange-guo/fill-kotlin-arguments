@@ -2,7 +2,7 @@
     <id>com.github.orange-guo.fill-kotlin-arguments</id>
     <name>Fill Kotlin Arguments</name>
     <version>0.0.1</version>
-    <vendor email="gxc0622@gmail.com" url="https://github.com/orange-guo">ornage-guo</vendor>
+    <vendor url="https://github.com/orange-guo">ornage-guo</vendor>
 
     <description><![CDATA[
         <p>A JetBrains IDEA plugin used to fill kotlin arguments.</p>
