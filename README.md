@@ -5,7 +5,7 @@ Ideal for whose are looking to streamline the argument filling process in functi
 
 ## Note
 
-This plugin is compatible only with IntelliJ IDEA versions 2024.1.1 and later.<br/>
+This plugin is compatible only with IntelliJ IDEA versions 2024.2 and later.<br/>
 Supported exclusively in K2 mode with the Kotlin plugin. <br/>
 Learn more about [K2 Mode](https://blog.jetbrains.com/idea/2024/08/meet-the-renovated-kotlin-support-k2-mode/)
 

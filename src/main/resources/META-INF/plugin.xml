@@ -15,8 +15,8 @@
     <change-notes><![CDATA[]]>
     </change-notes>
 
-    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="242.*"/>
+<!--    &lt;!&ndash; please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description &ndash;&gt;-->
+<!--    <idea-version since-build="242.*"/>-->
 
     <depends>com.intellij.modules.lang</depends>
     <depends>org.jetbrains.kotlin</depends>

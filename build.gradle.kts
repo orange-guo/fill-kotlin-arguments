@@ -29,6 +29,15 @@ java {
 group = "com.github.orange-guo.fill-kotlin-arguments"
 version = "0.0.1"
 
+intellijPlatform {
+	pluginConfiguration {
+		ideaVersion {
+			sinceBuild = "242"
+			untilBuild = "243.*"
+		}
+	}
+}
+
 dependencies {
 	intellijPlatform {
 		intellijIdeaCommunity("2024.2")
