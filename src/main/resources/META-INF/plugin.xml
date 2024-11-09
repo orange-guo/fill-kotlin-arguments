@@ -7,8 +7,9 @@
     <description><![CDATA[
         <p>A JetBrains IDEA plugin used to fill kotlin arguments.</p>
         <a target="_blank" href="https://raw.githubusercontent.com/orange-guo/fill-kotlin-arguments/main/screencast.gif">
-            <img src="https://raw.githubusercontent.com/orange-guo/fill-kotlin-arguments/main/screencast.gif" style="max-width:100%;">
+            <img src="https://raw.githubusercontent.com/orange-guo/fill-kotlin-arguments/main/screencast.gif">
         </a>
+        </p>
     ]]></description>
 
     <change-notes><![CDATA[]]>
