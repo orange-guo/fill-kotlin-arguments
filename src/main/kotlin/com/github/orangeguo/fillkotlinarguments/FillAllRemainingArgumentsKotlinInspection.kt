@@ -20,6 +20,10 @@ import org.jetbrains.kotlin.psi.KtCallExpression
 import org.jetbrains.kotlin.psi.KtPsiFactory
 import org.jetbrains.kotlin.psi.valueArgumentListVisitor
 
+/**
+ * @author Xiangcheng Kuo
+ * @since 2024-10-30
+ */
 class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 
 	data class Context(
