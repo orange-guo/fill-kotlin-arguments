@@ -63,14 +63,6 @@ class FillAllRemainingArgumentsQuickFix(
 				.filter { it.arguments.isNotEmpty() }.forEach { PutArgumentOnSeparateLineHelper.applyTo(it, editor) }
 		}
 
-		val withTrailingComma = false
-		// 2. Add trailing commas
-		if (withTrailingComma) {
-			argumentList.addTrailingCommaIfNeeded(factory)
-			argumentList.findElementsInArgsByType<KtValueArgumentList>(argumentSize)
-				.forEach { it.addTrailingCommaIfNeeded(factory) }
-		}
-
 		// 3. Remove full qualifiers and import references
 		// This should be run after PutArgumentOnSeparateLineHelper
 		argumentList.findElementsInArgsByType<KtQualifiedExpression>(argumentSize)
