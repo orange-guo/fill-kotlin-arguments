@@ -53,7 +53,7 @@ intellijPlatform {
 			sinceBuild = "242"
 			// untilBuild = "243.*"
 			// The until-build attribute can be unset by setting provider { null } as a value. Note that passing only null will make Gradle use a default value instead.
-			provider {
+			untilBuild = provider {
 				null
 			}
 		}
