@@ -89,7 +89,6 @@ class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 			isEnum() -> createEnumValue(ctx)
 
 			isFunctionType -> (this@createValue as KaFunctionType).createFunctionValue()
-
 			isNullableAnyType() -> "null"
 			else -> createConstructorCall(ctx)
 		}
@@ -99,7 +98,7 @@ class FillAllRemainingArgumentsKotlinInspection : AbstractKotlinInspection() {
 	private fun KaType.createConstructorCall(ctx: Context): String = with(ctx.session) {
 		val functionSymbol: KaFunctionSymbol =
 			symbol?.getSymbolContainingMemberDeclarations()?.declaredMemberScope?.constructors?.filter { it.isPrimary }
-				?.first() ?: return "TODO()"
+				?.firstOrNull() ?: return "TODO()"
 		functionSymbol.createFunctionCall(ctx)
 	}
 
