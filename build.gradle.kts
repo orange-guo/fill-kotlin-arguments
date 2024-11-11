@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	java
-	kotlin("jvm") version "2.0.0"
-	id("org.jetbrains.intellij.platform") version "2.1.0"
+	alias(libs.plugins.kotilin.jvm)
+	alias(libs.plugins.intellij.platform)
 }
 
 repositories {
@@ -45,8 +45,9 @@ dependencies {
 		bundledPlugin("org.jetbrains.kotlin")
 		instrumentationTools()
 	}
-	implementation(platform("org.jetbrains.kotlin:kotlin-bom:2.0.0"))
-	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation(platform(libs.kotlin.bom))
+	implementation(libs.kotlin.stdlib.jdk8)
+
 }
 
 tasks.withType<KotlinCompile> {
