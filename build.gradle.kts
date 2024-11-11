@@ -20,14 +20,14 @@ repositories {
 
 java {
 	toolchain {
-		languageVersion.set(JavaLanguageVersion.of("21"))
+		languageVersion.set(JavaLanguageVersion.of(libs.versions.java.get()))
 	}
 	withSourcesJar()
 	withJavadocJar()
 }
 
 group = "com.github.orange-guo.fill-kotlin-arguments"
-version = "0.0.1"
+version = libs.versions.fill.kotlin.arguments.get()
 
 intellijPlatform {
 	pluginConfiguration {
@@ -53,6 +53,6 @@ dependencies {
 tasks.withType<KotlinCompile> {
 	compilerOptions {
 		freeCompilerArgs = listOf("-Xcontext-receivers")
-		jvmTarget = JvmTarget.JVM_21
+		jvmTarget = JvmTarget.fromTarget(libs.versions.java.get())
 	}
 }

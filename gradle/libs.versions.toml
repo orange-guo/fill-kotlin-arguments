@@ -6,6 +6,7 @@ kotilin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 intellij-platform = { id = "org.jetbrains.intellij.platform", version.ref = "intellij-platform" }
 
 [versions]
+fill-kotlin-arguments = "0.0.1"
 java = "21"
 kotlin = "2.0.0"
 intellij-platform = "2.1.0"
