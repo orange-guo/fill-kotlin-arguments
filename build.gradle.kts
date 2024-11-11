@@ -51,7 +51,7 @@ dependencies {
 
 tasks.withType<KotlinCompile> {
 	compilerOptions {
-		freeCompilerArgs.set(listOf("-Xcontext-receivers"))
-		jvmTarget.set(JvmTarget.JVM_21)
+		freeCompilerArgs = listOf("-Xcontext-receivers")
+		jvmTarget = JvmTarget.JVM_21
 	}
 }
