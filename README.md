@@ -1,5 +1,7 @@
 # Fill Kotlin Arguments
 
+<iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/25789"> </iframe>
+
 ## Introduction
 
 A JetBrains IDEA plugin that using the new [K2 analysis API](https://kotlin.github.io/analysis-api) to fill in missing
@@ -17,10 +19,6 @@ Ideal for developers working in K2 mode who seek a smoother, more efficient way 
 > For more details on K2 mode, refer to [K2 Mode](https://blog.jetbrains.com/idea/2024/08/meet-the-renovated-kotlin-support-k2-mode/).<br/>
 > If you’re working in the older K1 mode, consider using the [kotlin-fill-class](https://github.com/suusan2go/kotlin-fill-class) plugin.
 
-## Usage
+## Screenshots
 
 ![](https://raw.githubusercontent.com/orange-guo/fill-kotlin-arguments/main/screencast.gif)
-
-## Installation
-
-Install from [IntelliJ IDEA Plugins](https://plugins.jetbrains.com/plugin/25789-fill-kotlin-arguments).
